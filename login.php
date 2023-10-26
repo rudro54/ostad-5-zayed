@@ -91,6 +91,7 @@ for ($i = 0; $i < count($roles); $i++) {
 
             </p>
             <button type="submit" class="btn btn-primary">Login</button>
+            <p>Do Not Have An Account ? <a href="./signup.php">Sign Up</a></p>
         </form>
     </div>
 
