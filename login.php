@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $email = $_POST['email'] ?? "";
 $password = $_POST['password'] ?? "";
 
@@ -29,15 +31,17 @@ while ($line = fgets($fp)) {
 fclose($fp);
 
 for ($i = 0; $i < count($roles); $i++) {
-    if ($roles[$i] == "user") {
-        if ($emails[$i] == $email && $passwords[$i] == $password) {
-            header("Location:index.php");
-        } else {
-            $errorMessage = "Wrong Email Or Password";
-        }
+
+    if ($emails[$i] == $email && $passwords[$i] == $password) {
+
+        $_SESSION["role"] = $roles[$i];
+        $_SESSION["email"] = $emails[$i];
+
+        header("Location:index.php");
     } else {
-        $errorMessage = "Role is not User";
+        $errorMessage = "Wrong Email Or Password";
     }
+
 }
 
 
