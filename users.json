@@ -68,5 +68,10 @@
         "name": "hey",
         "password": "1234",
         "role": "user"
+    },
+    "kintu@gmail.com": {
+        "name": "kintu",
+        "password": "1234",
+        "role": "user"
     }
 }
