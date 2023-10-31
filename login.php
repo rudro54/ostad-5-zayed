@@ -2,47 +2,50 @@
 
 session_start();
 
-$email = $_POST['email'] ?? "";
-$password = $_POST['password'] ?? "";
-
-// echo $email;
-// echo "<br>";
-// echo $password;
-
-$fp = fopen("./data/users.txt", "r");
-
-$roles = array();
-$emails = array();
-$passwords = array();
-$errorMessage = "";
-
-while ($line = fgets($fp)) {
-    $values = explode(",", $line);
-    // role,email,password
-
-    array_push($roles, trim($values[0]));
-    array_push($emails, trim($values[1]));
-    array_push($passwords, trim($values[2]));
 
 
+$user_email = $_POST['email'] ?? "";
+$user_password = $_POST['password'] ?? "";
+
+$usersFile = 'users.json';
+$users = file_exists($usersFile) ? json_decode(file_get_contents($usersFile), true) : [];
+
+
+
+
+
+
+
+$errorMessage = " ";
+
+if (empty($email) || empty($password)) {
+    $errorMessage = "Wrong Credentials";
 
 }
 
-fclose($fp);
+if ($user_email == "rudro54@gmail.com" && $user_password == "Aur098") {
+    $_SESSION['role'] = "admin";
+    header("Location:index.php");
 
-for ($i = 0; $i < count($roles); $i++) {
+}
 
-    if ($emails[$i] == $email && $passwords[$i] == $password) {
+foreach ($users as $email => $user) {
 
-        $_SESSION["role"] = $roles[$i];
-        $_SESSION["email"] = $emails[$i];
+    if ($user_email != "rudro54@gmail.com" && $user_password != "Aur098") {
+        if ($user_email == $email && $user_password == $user["password"]) {
 
-        header("Location:index.php");
-    } else {
-        $errorMessage = "Wrong Email Or Password";
+            $_SESSION['role'] = "user";
+            header("Location:index.php");
+        }
     }
-
 }
+
+
+
+
+
+
+
 
 
 
@@ -91,7 +94,7 @@ for ($i = 0; $i < count($roles); $i++) {
 
             </p>
             <button type="submit" class="btn btn-primary">Login</button>
-            <p>Do Not Have An Account ? <a href="./signup.php">Sign Up</a></p>
+            <p>Do Not Have An Account ? <a href="registration.php">Sign Up</a></p>
         </form>
     </div>
 

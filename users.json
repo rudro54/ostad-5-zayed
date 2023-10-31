@@ -1,0 +1,72 @@
+{
+    "zyva.zayed@gmail.com": {
+        "name": "Zyva Zayed",
+        "password": "1234",
+        "role": "user"
+    },
+    "rudro54@gmail.com": {
+        "name": "Zayed",
+        "password": "Aur098",
+        "role": "admin"
+    },
+    "aurin.abdullah@gmail.com": {
+        "name": "Aurin",
+        "password": "1234",
+        "role": "user"
+    },
+    "rudro@gmail.com": {
+        "name": "rudro",
+        "password": "123",
+        "role": "manager"
+    },
+    "marwan@gmail.com": {
+        "name": "marwan",
+        "password": "1234",
+        "role": "manager"
+    },
+    "montu@gmail.com": {
+        "name": "montu",
+        "password": "123",
+        "role": "user"
+    },
+    "plotu@gmail.com": {
+        "name": "poltu",
+        "password": "123",
+        "role": "user"
+    },
+    "pilot@gmail.com": {
+        "name": "pilot@gmail.com",
+        "password": "1234",
+        "role": "user"
+    },
+    "popa@gmail.com": {
+        "name": "popa",
+        "password": "123",
+        "role": "user"
+    },
+    "mama@gmail.com": {
+        "name": "mama",
+        "password": "123",
+        "role": "user"
+    },
+    "tata@gmail.com": {
+        "name": "tata",
+        "password": "123",
+        "role": "user"
+    },
+    "nana@gmail.com": {
+        "name": "nana",
+        "password": "1234",
+        "role": "user"
+    },
+    "papa@gmail.com": {
+        "name": "papa",
+        "password": "1234",
+        "role": "user"
+    },
+    "laily@gmail.com": {
+        "name": "laily",
+        "password": "1234",
+        "role": "user"
+    }
+}

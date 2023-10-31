@@ -1,4 +1,0 @@
-user, rudro54@gmail.com, 123456
-admin, admin@admin.com, pass123
-user, aurin@gmail.com, 123789
- user, zyva@gmail.com, 123
