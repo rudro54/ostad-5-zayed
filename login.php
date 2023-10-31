@@ -10,9 +10,13 @@ $user_password = $_POST['password'] ?? "";
 $usersFile = 'users.json';
 $users = file_exists($usersFile) ? json_decode(file_get_contents($usersFile), true) : [];
 
+$successMessage = "";
 
+if (!empty($_POST["remember"])) {
+    setcookie("user_email", $_POST["email"], time() + 3600);
+    setcookie("password", $_POST["password"], time() + 3600);
 
-
+}
 
 
 
@@ -84,12 +88,27 @@ foreach ($users as $email => $user) {
             <div class="form-group form-check pb-2">
                 <input type="checkbox" class="form-check-input" name="remember" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+
                 <!-- will use cookie to remember this -->
             </div>
             <p class="text-warning">
                 <?php
+                if (isset($successMessage)) {
+                    echo $successMessage;
+                }
 
-                echo $errorMessage;
+
+                ?>
+
+            </p>
+            <p class="text-warning">
+                <?php
+                if (isset($errorMessage)) {
+                    echo $errorMessage;
+
+                }
+
+
                 ?>
 
             </p>

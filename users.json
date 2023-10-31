@@ -2,7 +2,7 @@
     "zyva.zayed@gmail.com": {
         "name": "Zyva Zayed",
         "password": "1234",
-        "role": "user"
+        "role": "manager"
     },
     "rudro54@gmail.com": {
         "name": "Zayed",
@@ -34,11 +34,6 @@
         "password": "123",
         "role": "user"
     },
-    "pilot@gmail.com": {
-        "name": "pilot@gmail.com",
-        "password": "1234",
-        "role": "user"
-    },
     "popa@gmail.com": {
         "name": "popa",
         "password": "123",
@@ -66,6 +61,11 @@
     },
     "laily@gmail.com": {
         "name": "laily",
+        "password": "1234",
+        "role": "user"
+    },
+    "hey@gmail.com": {
+        "name": "hey",
         "password": "1234",
         "role": "user"
     }
